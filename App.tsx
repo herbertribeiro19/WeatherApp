@@ -18,7 +18,7 @@ export default function App() {
   const [precipitation, setPrecipitation] = useState(null);
 
   async function getCurrentWeather(city: string) {
-    
+    const API_key = "bb421a4d9d75931d9b6a55aeda3acad9";
     try {
       const response = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_key}&units=metric`);
       const data = response.data;
